@@ -16,7 +16,7 @@ bot.command('audio', ctx => {
 
 bot.on('text', ctx => {
     if (!waits_for_text) {
-        return ctx.reply('I did not expect any more input.')
+        return ctx.reply('What?.')
     }
 
     say.export(ctx.message.text, '', 0.75, 'audio.wav', (err) => {
