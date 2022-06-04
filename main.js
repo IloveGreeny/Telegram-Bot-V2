@@ -9,22 +9,22 @@ bot.start(ctx => {
     ctx.reply("Programming is cool!")
 });
 
-bot.command('audio', ctx => {
+bot.command("audio", ctx => {
     waits-for-text = true
     ctx.reply("Enter your text!")
 });
 
-bot.on('text', ctx => {
+bot.on("text", ctx => {
     if (!waits-for-text) {
         return ctx.reply("What?.")
     }
 
-    say.export(ctx.message.text, '', 0.75, 'audio.wav', (err) => {
+    say.export(ctx.message.text, "", 0.75, "audio.wav", (err) => {
         if (err) {
             return console.error(err)
         }
         ctx.replyWithVoice({
-            source: './audio.wav'
+            source: "./audio.wav"
         });
     });
 });
