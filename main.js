@@ -1,8 +1,3 @@
-//const { Telegraf } = require("telegraf");
-//const say = require("say");
-//const {text} = require("telegraf/typings/button");
-//const {BOT_TOKEN} = process.env;
-//const bot = new Telegraf(BOT_TOKEN);
 const { Telegraf } = require("telegraf");
 const {BOT_TOKEN} = process.env;
 const bot = new Telegraf(BOT_TOKEN);
