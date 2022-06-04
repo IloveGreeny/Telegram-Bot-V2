@@ -3,19 +3,19 @@ const {BOT_TOKEN} = process.env;
 const bot = new Telegraf(BOT_TOKEN);
 const say = require("say");
 
-let waits-for-text = false;
+let waits_for_text = false;
 
 bot.start(ctx => {
     ctx.reply("Programming is cool!")
 });
 
 bot.command("audio", ctx => {
-    waits-for-text = true
+    waits_for_text = true
     ctx.reply("Enter your text!")
 });
 
 bot.on("text", ctx => {
-    if (!waits-for-text) {
+    if (!waits_for_text) {
         return ctx.reply("What?.")
     }
 
